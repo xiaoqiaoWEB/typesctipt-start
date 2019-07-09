@@ -23,3 +23,27 @@
   var s = flag.suc;
   var e = flag.err;
 ```
+## fucntion 
+- 函数声明
+```
+  function getInfo (name: string):string {
+    return `${name} --name`
+  }
+  
+  编译之后
+  function getInfo(name) {
+    return name + "--name";
+  }
+```
+- 函数表达式
+```
+let getInfo = function (name: string): string { 
+    return `${name} --name`
+}
+
+编译之后
+var getInfo = function (name) {
+    return name + " --name";
+};
+```
+
