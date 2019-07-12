@@ -84,3 +84,96 @@
 // }
 
 // let p1 = getInfo('QQ', 18)
+
+
+// 3 可索引接口
+// 可索引接口：数组、对象的约束  （不常用）
+
+// let arr:number[] = [1,2]
+// let arr1:Array<number> = [1,2]
+
+// 数组 约束
+// interface UserArr {
+//   [index: number]: string
+// }
+
+// let arr: UserArr = ['abo', 'bb']
+// console.log(arr[1])
+
+// 对象 约束
+// interface UserOng {
+//   [index: string]: string
+// }
+
+// let p:UserOng = {
+//   "name": '123',
+//   "age": '11'
+// }
+
+
+// 4 类型接口  对类的约束  和   抽象类抽象有点相似
+
+// interface Animal {
+//   name:string;
+
+//   eat(str: string): void;
+// }
+
+// class Dog implements Animal {
+//   name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+
+//   eat() {
+//     console.log(`this is  ${name}`)
+//   }
+// }
+
+// class Cat implements Animal {
+//   name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+
+//   eat(str: string): string {
+//     return `this is ${name}----str`
+//   }
+// }
+
+
+// 接口扩展 : 接口的继承
+
+// interface Animal {
+//   name: string;
+//   eat():void;
+// }
+
+// interface Person extends Animal  {
+//   work(): void;
+// }
+
+// class Cat {
+//   name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+
+//   conding () {
+//     return `${name} --- conding`
+//   }
+// }
+
+// class Dod extends Cat implements Person{
+//   constructor(name: string) {
+//     super(name)
+//   }
+
+//   eat(): string {
+//     return `${name}--eat`
+//   }
+
+//   work(): string {
+//     return `${name}-----work`
+//   }
+// }
