@@ -64,42 +64,42 @@
 // 把类作为 参数类型的 泛型类
 
 //定义操作数据库的泛型类
-class MysqlDb <T> {
-  add(info: T): boolean {
-    console.log(info)
-    return true;
-  }
-}
+// class MysqlDb <T> {
+//   add(info: T): boolean {
+//     console.log(info)
+//     return true;
+//   }
+// }
 
 
 //想给User表增加数据
 // 1、定义一个User类 和数据库进行映射
-class User {
-  userName: string | undefined;
-  age: number | undefined;
-}
+// class User {
+//   userName: string | undefined;
+//   age: number | undefined;
+// }
 
-let u = new User();
-u.userName = 'name';
-u.age = 18;
+// let u = new User();
+// u.userName = 'name';
+// u.age = 18;
 
-let db = new MysqlDb <User>()
+// let db = new MysqlDb <User>()
 
-db.add(u)
+// db.add(u)
 
 //2、相关ArticleCate增加数据  定义一个ArticleCate类 和数据库进行映射
-class ArticleCate {
-  title: string | undefined;
-  desc: string | undefined;
-  status: number | undefined;
-}
+// class ArticleCate {
+//   title: string | undefined;
+//   desc: string | undefined;
+//   status: number | undefined;
+// }
 
-let p =new ArticleCate();
+// let p =new ArticleCate();
 
-p.title = '123';
-p.desc = '456';
-p.status = 1;
+// p.title = '123';
+// p.desc = '456';
+// p.status = 1;
 
-let pDb = new MysqlDb <ArticleCate> ();
+// let pDb = new MysqlDb <ArticleCate> ();
 
-pDb.add(p)
+// pDb.add(p)
